@@ -1,0 +1,32 @@
+why Arrays?
+we create variables to store the information but we want to store the large 
+information we have to create so many variables with different names it is so 
+complex to remember such a huge number of variable names so we approach collection 
+concept such as arrays...
+what is array?
+arrays is index based data structure to store large volume of data using single name(variable name)
+that stores homogeneous data.arrays are treated as object in java.memory is allocated in heap area.
+we use new keyword to create object in java.
+int[] a=new int[5];
+collection of similar data under single variable name.
+2-d array(regular):
+int[][] ar=new int[3][4];
+3-d array(regular):
+int[][][] ar=new int[3][4][3];
+jagged array:
+int[][] ar=new int[3][];
+a[0]=new int[5];
+a[0]=new int[4];
+a[0]=new int[3];
+3-d array(jagged):
+3 coleges different number of classes and different number of students.
+int[][][] ar=new int[3][][];
+ar[0]=new int[2][];
+ar[1]=new int[4][];
+ar[2]=new int[3][];
+ar[0][0]=new it[4];
+ar[0][1]=new int[2];
+.
+.
+continues.
+
