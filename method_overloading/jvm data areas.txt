@@ -1,0 +1,79 @@
+class Calculator1{
+int a,b,c;
+void add(){
+a=10;b=20;c=a+b;
+System.out.println(c);
+}
+}
+public class LaunchCalc1{
+public static void main(String[] args){
+Calculator1 calc=new Calculator1();
+calc.add();
+}
+}
+instance variables-fields
+jvm-dataareas-heap and stack 
+for objects memory allocated in heap area.
+method consist of -menthod name,input parameters,body,return type.
+methods->task=> to execute the task we have to bring task to stack area.
+jvm-get byte code of that method (requirement:main method) to execute => 
+one record created in stack area (main() method).
+when control comes to main method and 
+bring to stack area then we call it as stack frame(activaton record).
+execution gets start in stack area (object creation done.)
+memory for  all instance get created in heap area.some address will be there.
+memory for reference variables in stack area refering(address) the object(instance varibles in heap area).
+when control comes to add method one more stack frame created.
+after completing execution of add method that stack frame memory will get deallocated.
+we get the object from the heap area and after 
+completing the execution of main method memory of main method gets deleted in stack area.
+then the memory of heap area get deallocated by garbage collecor as nothing is referencing the object.
+
+class Sri1{
+int res;
+void add(int a,int b){
+res=a+b;//parameters
+System.out.println(res);
+}
+}
+public class Sri12{
+public static void main(String[] args){
+Sri1 sri=new Sri1();
+sri.add(10,20);//arguments
+}
+}
+
+class Sri1{
+int a,b,res;
+int add(){
+a=10;
+b=20;
+int res=a+b;
+return res;
+}
+}
+public class Sri12{
+public static void main(String[] args){
+Sri1 sri=new Sri1();
+int c=sri.add();
+System.out.println(c);
+}
+}
+
+//3
+
+class Sri1{
+int add(int a,int b){
+int res=a+b;
+return res;
+}
+}
+public class Sri12{
+public static void main(String[] args){
+Sri1 sri=new Sri1();
+int c=sri.add(10,20);
+System.out.println(c);
+}
+}
+
+
