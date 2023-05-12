@@ -29,4 +29,9 @@ ar[0][1]=new int[2];
 .
 .
 continues.
-
+Arrays in java are guarded with the boundaries.so there is no buffer overrun problem in java.
+collections concept can be applied to not only to primitive data types but 
+also used for objects type but it should be of type homogeneous.
+size of array is fixed and it cannot shrink or grow.
+contiguous memory is one of the disadvantage,
+To overcome this disadvantage we use arraylist concept of collections.
