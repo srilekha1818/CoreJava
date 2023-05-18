@@ -35,3 +35,22 @@ also used for objects type but it should be of type homogeneous.
 size of array is fixed and it cannot shrink or grow.
 contiguous memory is one of the disadvantage,
 To overcome this disadvantage we use arraylist concept of collections.
+for-each loop(advanced for loop) is very useful there s no need to mention 
+the starting and ending index of the array also very useful for iteration.
+limitation of for-each loop is :
+we don't have any control of index so we cannot modification to the array.
+for-each loop traverse or iterate only in forward direction.
+int [] [] a,b; =>a,b are two dimensional arrays
+int [][]a[],b;=>a is 3d array and b is 2d array.
+int []a ,b[];=>a is 1d,b is 2d array.
+Every type of array has a class internally that's used for 
+internal purposes and not used by the programmer.
+int [] a=new int[4];=>class is [I
+all the methods in the Arrays class are static in nature.static methods doesn't required 
+to create the object to call the methods.we can call them with their classnames to call methods.
+int [] a={10,50,60,30,20};
+Arrays.sort(a);
+int[] ar=new int[5];
+Arrays.fill(a,5);
+note:sort,fill are the static methods of the utility class named Arrays.
+element:data that we store in the array object.
