@@ -54,3 +54,4 @@ int[] ar=new int[5];
 Arrays.fill(a,5);
 note:sort,fill are the static methods of the utility class named Arrays.
 element:data that we store in the array object.
+for binary serach the array must be sorted.
