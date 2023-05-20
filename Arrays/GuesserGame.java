@@ -1,40 +1,41 @@
-import java.util.Scanner;
+import java.util.*;
 
 class Guesser{
     int guessNum;
-    int GuesserNum() {
-        try (Scanner sc = new Scanner(System.in)) {
-            System.out.print("enter a guessing number: ");
+    int guessNum() {
+        Scanner sc = new Scanner(System.in);
+            System.out.print("guesser,please! enter a guessing number: ");
             guessNum=sc.nextInt();
-        }
+        
         return guessNum;
     }
 
 }
-class player{
+class Player{
     int guessNum;
-    int GuesserNum() {
-        try (Scanner sc = new Scanner(System.in)) {
-            System.out.print("enter a guessing number: ");
+    int guessNum() {
+        Scanner sc = new Scanner(System.in);
+            System.out.print("player,please! enter a guessing number: ");
             guessNum=sc.nextInt();
-        }
+        
         return guessNum;
+    
     }
 
 }
-class judge{
+class Judge{
     int guesserNum;
     int playerNum1;
     int playerNum2;
     void collectNumGuesser(){
         Guesser g=new Guesser();
-        guesserNum=g.GuesserNum();
+        guesserNum=g.guessNum();
     }
     void collectNumPlayers(){
-        player p1=new player();
-        player p2=new player();
-        playerNum1=p1.GuesserNum();
-        playerNum2=p2.GuesserNum();
+        Player p1=new Player();
+        Player p2=new Player();
+        playerNum1=p1.guessNum();
+        playerNum2=p2.guessNum();
     }
 
     void compare() {
@@ -60,7 +61,7 @@ class judge{
 }
 public class GuesserGame{
     public static void main(String[] args){
-        judge j= new judge();
+        Judge j= new Judge();
         j.collectNumGuesser();
         j.collectNumPlayers();
         j.compare();
