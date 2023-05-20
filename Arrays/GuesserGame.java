@@ -3,9 +3,10 @@ import java.util.Scanner;
 class Guesser{
     int guessNum;
     int GuesserNum() {
-        Scanner sc=new Scanner(System.in);
-        System.out.print("enter a guessing number: ");
-        guessNum=sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("enter a guessing number: ");
+            guessNum=sc.nextInt();
+        }
         return guessNum;
     }
 
@@ -13,9 +14,10 @@ class Guesser{
 class player{
     int guessNum;
     int GuesserNum() {
-        Scanner sc=new Scanner(System.in);
-        System.out.print("enter a guessing number: ");
-        guessNum=sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("enter a guessing number: ");
+            guessNum=sc.nextInt();
+        }
         return guessNum;
     }
 
