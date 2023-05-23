@@ -1,0 +1,20 @@
+String is an object in the package java.lang.String
+it is a collection of characters.
+String is immutable in nature ,if you try to modify you cannot do it.
+StringBuilder and StringBuffer are mutable in nature.
+String s1=new String("sachin");//two copies availabe for this object.one in heap area and 
+the other in scp(string constant pool) without reference.
+String s2="sachin";//created string using direct literal then 
+only one copy of the object gets created(memory available) in scp with reference.
+s1==s2 is false.s1.equals (s2) is true as it compares only the content but not the references/objects.
+
+StringBuilder s1=new StringBuilder("Bandra");
+StringBuilder s2=new StringBuilder("Bandra");//s1==s2 and s1.equals(s2) is false as two references get cretaed and comparision is not about the content.
+e.g:you can perform concatenation on s1 and s2.
+scp:no duplicates are allowed.same object can be used by diiferent users or variables.
+scp is immutable in nature.
+String s1=new String("sachin");//s1 is stored as an array in heap memory but we cannot apply the indexing method on strings you get compile time error.
+we can use charAt() method to get particualr index value in string.
+equals method compares the content.
+
+
