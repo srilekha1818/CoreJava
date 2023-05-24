@@ -15,6 +15,26 @@ scp:no duplicates are allowed.same object can be used by diiferent users or vari
 scp is immutable in nature.
 String s1=new String("sachin");//s1 is stored as an array in heap memory but we cannot apply the indexing method on strings you get compile time error.
 we can use charAt() method to get particualr index value in string.
-equals method compares the content.
-
-
+equals method compares the content includes case sensitivity.
+equalsignorecase ignore the type of case.
+s.length => gives compile time error cause strings don't hve length propery.
+s.substr(int begin,int end); => gives begin to end-1 string characters.
+s.substr(9);gives 9 to end characters.
+s.replace('a','b');
+s.indexOf('h');
+s.lastIndexOf('n');
+concat() and toUpperCase() and toLowerCase(),toString() are some of the important methods in the string class.
+StringBuilder,StringBuffer and all wrapper classes(byte,int,short,long,float,double,character,boolean) are by default mutable.
+mutable-can be changed.
+immutable-can't be changed.
+if we use final to StringBuffer object we cannot refer the object to another object and it can modified.
+whenever content is modified frequently,we use StringBuffer/StringBuilder.
+StringBuffer sb=new StringBuffer(15);
+StringBuffer sb=new StringBuffer("sachin");
+sb is an empty string buffer with default capacity 16.
+new capacity =(old capacity+1)*2
+length(),capacity() are the methods of StringBuffer.
+15 => length 
+StringBuffer sb=new StringBuffer("sachin");
+("sachin") =>capacity is 22.length is 6.
+sb.setCharAt(5,'o');//sachon
