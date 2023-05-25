@@ -38,3 +38,19 @@ length(),capacity() are the methods of StringBuffer.
 StringBuffer sb=new StringBuffer("sachin");
 ("sachin") =>capacity is 22.length is 6.
 sb.setCharAt(5,'o');//sachon
+sb.insert(5,'i');//sachoin
+sb.insert(5,11);//sacho11in
+sb.insert(5,"hii");//sachohii11in;
+StringBuffer sb=new StringBuffer(1000);//1000
+sb.append("sachin");//1000
+sb.trimToSize();
+ System.out.println(sb);//6
+ methods of StringBuffer are synchronized(1.0v multi threading) and methods of StringBuilder(1.5v) are not synchronized.
+StringBuffer:threadafe is required.
+StringBuilder:threadsafety is required.
+methodchaining:we can apply methodchaining if return type of the methods are same.
+StringBuffer sb=new StringBuffer();
+sb.append("sachin").insert(6,"tendulkar").reverse().append("ind").delete(0,4).reverse();
+ System.out.println(sb);
+
+
