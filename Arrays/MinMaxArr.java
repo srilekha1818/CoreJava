@@ -1,3 +1,4 @@
+package Arrays;
 public class MinMaxArr {
     public static void main(String[] args) 
     {
