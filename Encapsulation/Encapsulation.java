@@ -1,5 +1,6 @@
 class Solution{
     private String name;
+    /* if data members are not private any one can access it by using the reference.*/
     private int age;
     private String city;
     public String getName() {

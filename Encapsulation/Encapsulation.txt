@@ -6,4 +6,6 @@ oops pillars:
 
 encapsulation:provides data security.class that is having only private modifier variable can be known as bean.
 getters and setters are been used in encapsulation and this keyword plays a keyrole 
-to avoid shadowing problem due to the differences between the names of the variables
+to avoid shadowing problem due to the differences between the names of the variables.
+we can create one setter for all the objects but it is not same with the getters.
+this keyword reference the currently running object.

@@ -2,11 +2,19 @@ package Arrays;
 import java.util.*;
 
 class Guesser{
+    int rand;
     int guessNum;
-    int guessNum() {
-        Scanner sc = new Scanner(System.in);
-            System.out.print("guesser,please! enter a guessing number: ");
-            guessNum=sc.nextInt();
+    int min=1;
+    int max=5;
+    int guessNum(){
+        int guessNum=(int)(Math.random()*(max-min+1)+min);
+        System.out.println("Guesser No :");
+        while(rand>=10 && rand<0) {
+            System.out.println("Please Re Enter ");
+            guessNum=(int)(Math.random()*(max-min+1)+min);
+            
+        }
+      
         
         return guessNum;
     }
