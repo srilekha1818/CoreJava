@@ -9,3 +9,17 @@ getters and setters are been used in encapsulation and this keyword plays a keyr
 to avoid shadowing problem due to the differences between the names of the variables.
 we can create one setter for all the objects but it is not same with the getters.
 this keyword reference the currently running object.
+constructor name is same as the class name and doesn't have any return type.it gets invoked when the object is created.
+without object there is no constructor.
+compiler includes a default zero parameterized constructor if the developer doesn't created ny constructor.
+if he creates any one constructor then compiler doesn't create any constructor default.
+constructor overloading refers to the same constructor name with different parameters .we can have many constructors in a class.
+super() method calls the parent constructor of the current class.it should be on the first line of the program in the constructor.
+this() method can't be used along with super() method we can only use one of them in the first line of the constructor.
+this() method calls the same class constructor.calls the zero parameterized constructor.
+this("nitin") calls to the constructor of the same class  that is having name parameter.this process can be known as the
+ constructor chaining.
+note:include the logic of data connection in the constructor then when the object created,
+then database gets connected to the program.
+
+
