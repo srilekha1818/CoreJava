@@ -18,16 +18,15 @@ public class CopyStrings {
     }
     System.out.println("to uppercase string copied: "+s3);
     System.out.println("Please enter a string: ");
-    Scanner sc=new Scanner(System.in);
-    String name=sc.nextLine();
+    try (Scanner sc = new Scanner(System.in)) {
+        String name=sc.nextLine();
    String nameL="";
    for(int i=0;i<name.length();i++){
-    nameL=nameL+(char)(name.charAt(i)+32);
+        nameL=nameL+(char)(name.charAt(i)+32);
 }
 System.out.println("to lowerCase string copied: "+nameL);
-
-
-String s11="SriLekhA";
+    }
+    String s11="SriLekhA";
     String s21="";
     for(int i=0;i<s11.length();i++){
         if(s11.charAt(i)>='a' && s11.charAt(i)<='z')

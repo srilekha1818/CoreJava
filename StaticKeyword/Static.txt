@@ -1,0 +1,30 @@
+static variables,static methods,static block are object independent .
+order of execution of a class:
+1.static variables.
+2.static block
+3.static methods
+4.memory for instance variables.
+5.non static blocks
+6.constructor
+7. methods
+java program=> compiler=>byte code=>jvm(executes code).jvm inside the jre(battle field)
+jvm execution process:
+use class loader subsystem and then arrange the data areas and then executes the program using interpreter and jit compiler and many other native references.
+.class file =>jvm,jvm call class loader subsystem(loading,linking,initialization) where 
+loading:static variables get executed and allocated to the memory in heap area and
+ linking:verification code will be done and static block gets executed in the stack area.
+ static method is main method gets executed and then other static methods,instance variables,
+ initialization:java blocks,constructor gets executed.
+ just in time compiler is used when a method is called repeatedly then it acts as cache.
+ static variables and static block and main method gets executed automatically.
+ static methods should be called by us.
+ every time constructor gets created and invoked behind the scenes it also includes non static blocks.
+ one copy of static variables can be used by all the objects also known as class variables and object independents.
+ can be accessed using classname.
+ anywhere in the rogram we can use static variables.
+ static block vs main method which executes first?
+  static block:to initialize static variables that gets execute while class loading.
+  constructor or non static block:while creating object execute specified statements.
+  for the repeated statements execution in constructors we can use non static block or java blocks.
+  static block first gets executed and then main method.
+
