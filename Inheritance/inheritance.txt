@@ -1,0 +1,4 @@
+inheritance refers to a class acquiring/using the behaviour and properties of another class can be known as inheritance.
+java supports the relationship between classes.
+is-a relationship(base-sub,existing-derived,parent-child) using extend keyword and 
+has -a relationship depends on dependency injection,aggregation,composition.
