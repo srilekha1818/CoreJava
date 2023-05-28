@@ -27,4 +27,10 @@ loading:static variables get executed and allocated to the memory in heap area a
   constructor or non static block:while creating object execute specified statements.
   for the repeated statements execution in constructors we can use non static block or java blocks.
   static block first gets executed and then main method.
+static variables memory get allocated in heap area directly at a time and it is fixed,and it is used by all the objects.
+ and instance variables memory gets created in the objects everytime and it is specific to the objects.
+when to use static variables and when instance variables are used?
+when a common copy of data is to be used by all the objects then we prefer to use static variables that also saves memory.
+
+
 
