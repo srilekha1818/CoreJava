@@ -1,3 +1,4 @@
+package Encapsulation;
 class Solution2 {
     private int num;
     private String name;

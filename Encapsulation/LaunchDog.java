@@ -1,3 +1,4 @@
+package Encapsulation;
 class Dog{
 private String name;
 private int cost;

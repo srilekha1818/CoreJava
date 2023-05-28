@@ -1,3 +1,4 @@
+package Encapsulation;
 class DbConnect{
     public DbConnect(){
         System.out.println("connected to database");
