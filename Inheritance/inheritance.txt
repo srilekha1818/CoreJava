@@ -1,4 +1,45 @@
 inheritance refers to a class acquiring/using the behaviour and properties of another class can be known as inheritance.
 java supports the relationship between classes.
+writing a class hierarchial to other classes rather than only single class.
+it can be achieved using extend keyword.
 is-a relationship(base-sub,existing-derived,parent-child) using extend keyword and 
 has -a relationship depends on dependency injection,aggregation,composition.
+object class is the parent class to all the classes.whatever methods are there in Object class all get inherited to the other classes by default.
+multi level inheritance is allowed in java.
+one parent can have multiple children can be known as hierarchial inheritance and the combination of hierarchial and multiple iheritance
+ can be known as hybrid inheritance.
+ multiple inheritance is not allowed in java.it will lead to diamond shaped problem.cyclic inheritaance is not allowed
+ private members of class is not allowed to participate in inheritance.bcz of encapsulation preservation.
+ constructor don't participate in inheritance.super() method calls the parent class constructor.
+
+
+ constructor execution in case of inheritance:
+ as super()method is present by default in child class constructors .super() method calls the parent class constructors.
+
+ methods:
+ inherited methods(present in parent class and are directly used in child class without any modifications)
+ overridden methods(present in parent class and are same name used in child class with some modifications)
+ specialized methods(present only in child class)
+public:high visibilty(anywhere we can access)
+private :only in same class same package
+protected: until same package and outside with is-a relationship they are accessible
+default:until same package is accessible.
+rules to override method:
+ 1.visibilty of  overridden methods cannot be reduced compared to overriding  methods
+ 2.return type of overridden and overriding methods should be same.
+ 3.if there is a relationship between return type of parent class and return type of child class then
+  return type may not be the same (co-variant return type).
+  4.parameters for the overridden and overriding methods should be same.
+
+
+  super() method:
+  we write this method inside constructor that calls the parent class constructor.
+  super; keyword:
+  super.i; means you get the value of parent class variable value of i.
+
+  final keyword:
+  final method can get inherited but cannot be overridden.
+  final class won't get inherited.
+  final variable acts as constant and we cannot change it.
+
+
