@@ -1,0 +1,17 @@
+Loose coupling:whenever we are creating the objects,the reference type is parent type then it is known as loose coupling.
+Tight coupling:the reference type of object and object type are same they are known as tight coupling.
+
+while loose coupling,we are understanding that we are doing one to many .
+creating parent type reference is useful to achieve polymorphism.true polymorphism is useful for code flexibilty.
+
+directly,using parent type reference we cannot call child specialized methods.but by changing
+ the behaviour of parent we can call the specialized methods in child class(downcasting) .
+
+ for child objects creating parent type reference is known as upcasting and viceversa to downcasting.
+((childref)parent).specializedmethodname;
+
+Abstraction:hiding actual implementation details and showing only the features can be known as abstraction.
+abstract keyword is used to methods.abstract methods are such methods where they don't have any implementation/body but it only have method signature.
+
+In a class if there is any abstraction method it is mandatory to keep the class abstract.Abstract class can have both abstract and concrete methods.
+abstract keyword cannot be applied to variables.
