@@ -1,4 +1,5 @@
-Loose coupling:whenever we are creating the objects,the reference type is parent type then it is known as loose coupling.
+Loose coupling:whenever we are creating the objects,the reference type is parent type then it is
+ known as loose coupling.
 Tight coupling:the reference type of object and object type are same they are known as tight coupling.
 
 while loose coupling,we are understanding that we are doing one to many .
@@ -13,5 +14,16 @@ directly,using parent type reference we cannot call child specialized methods.bu
 Abstraction:hiding actual implementation details and showing only the features can be known as abstraction.
 abstract keyword is used to methods.abstract methods are such methods where they don't have any implementation/body but it only have method signature.
 
-In a class if there is any abstraction method it is mandatory to keep the class abstract.Abstract class can have both abstract and concrete methods.
+In a class if there is any one abstract method it is mandatory to keep the class abstract.
+Abstract class can have both abstract and concrete methods.
 abstract keyword cannot be applied to variables.
+
+Abstract method is such a method where only method signature will be present but no implementation is there.
+
+we cannot create objects for abstract classes as we don't have implementation in abstract methods.
+The child class extending the abstract class then either have to  implement the abstract method  or declare class abstract.
+constructor cannot make as abstract.
+abstract class is an incomplete class,child class implement it by inheritance.
+we cannot make abstract class,abstract method as final.
+we can have constructor in abstract class.
+
