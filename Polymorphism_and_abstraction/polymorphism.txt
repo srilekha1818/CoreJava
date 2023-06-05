@@ -19,11 +19,11 @@ Abstract class can have both abstract and concrete methods.
 abstract keyword cannot be applied to variables.
 
 Abstract method is such a method where only method signature will be present but no implementation is there.
-
+abstract class can have all abstract methods.(100% abstraction).
 we cannot create objects for abstract classes as we don't have implementation in abstract methods.
 The child class extending the abstract class then either have to  implement the abstract method  or declare class abstract.
 constructor cannot make as abstract.
 abstract class is an incomplete class,child class implement it by inheritance.
 we cannot make abstract class,abstract method as final.
 we can have constructor in abstract class.
-
+polymorphism and abstraction are dependent on inheritance.
