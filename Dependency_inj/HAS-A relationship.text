@@ -1,0 +1,26 @@
+classes can be related by two types of relationships:
+1.Has-a relationship
+2.is-a relationship(extend keyword)
+Another class reference(dependant object) should be a part of this class(targeted object) reference.
+the process of injecting dependant object into targeted object can be known as dependency injection.
+instance variable can be initialized in 2 ways:by using constructor and usig setters.
+we can achieve dependancy injection in two ways:
+1.constructor dependancy injection(the process of injecting dependant object into targeted object through constructor can be known as dependency injection.
+)
+2.setter dependancy injection(the process of injecting dependant object into targeted object through setters can be known as dependency injection.
+).
+As part of java application development,we use classes(entitties as per requirement).to provide optimization,code reusability,efficiency, we need to establish relationship between classes.
+three types of relationship:
+1.HAS-A relationship(extensively used)
+2.is-a relationship
+3.use-a relationship(not used widely)
+communication b/w entitties and data navigation between entities is improved using HAS-A relationships as it defines associations between classes.
+types of associations in java:
+1.1:M(one to many association)
+2.M:1
+3.M:M
+4.1:1
+to achieve associations we have to declare single reference or array of reference variables of an entity class in Another entity class.
+instance variable is declared in targeted class.
+
+
