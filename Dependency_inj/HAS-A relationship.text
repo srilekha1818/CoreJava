@@ -27,3 +27,14 @@ dependant object code should be ready before the targeted object creation.
 
 one to one association:it is a relationship between entities ,where one instance of an entity is exactly mapped to the one instance of another entity.
 e.g:every employee must have only one account.
+
+one to many association:it is a relationship between entities where one instance of an entity is mapped to many instances of the other entity.
+e.g:one department has many employees.
+
+many to one association:it is a relationship between entities where many instances of an entity is mapped to the one instance of another entity.
+e.g:many students join in one branch.
+
+many to many association:it is a relationship between entities where many instances f an entity is mappes to many instances of another entity .
+e.g:many students join multiple courses.
+
+
