@@ -20,7 +20,7 @@ Also,while implementing methods of interface class the method overriding rules s
 
 interface[100% abstraction]
 abstract class[abstract and concrete methods](implements interface)
-concrete clas(extends abstract class)
+concrete clas(no abstraction ,extends abstract class)
 
 
 
