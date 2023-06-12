@@ -1,0 +1,29 @@
+**any SRS(service requirement specification) is an interface.
+interface acts as a medium if communication happens through interface evrything goes smoothly.
+e.g:a web application can be run by any server(softwares) like tomcat,jboss,wildfly by using servlets api.
+we know .class file is executed by jvm(part of jdk software)
+in webapplications case:
+.class files are executed by jvm(part of special softwares called servers like jboss,glassfish,tomcat)
+ from client view,interface is the services that are expecting.
+ from application(service provider) view.interface is the services that are offering.
+**interface is a contract b/w service provider and client.
+customer =>GUI =>bank
+**to attain or to get 100% abstraction we use interface .
+when we make a class abstract we don't need to use abstract keyword in methods at all as interface gives 100% abstraction.
+in he interface class,access modifiers of the methods are by default public and abstract.
+interface developer convention to a class e.g:ISample
+another class like e.g:SampleImpl implements the interface class.
+e.g:class SampleImpl implements ISample
+we implement methods of interface class in a class if any of the method of interface class is not implement in the class that
+implementing one of two methods should define it as abstract as the other method by default is abstract .
+Also,while implementing methods of interface class the method overriding rules should be followed.
+
+interface[100% abstraction]
+abstract class[abstract and concrete methods](implements interface)
+concrete clas(extends abstract class)
+
+
+
+
+
+
