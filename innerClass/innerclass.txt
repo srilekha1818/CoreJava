@@ -1,0 +1,9 @@
+inner classes are the classes that present inside the other class.
+we use inner class for the entity maintenance in the project or if a class is purposefully needed for the other class.
+this concept is hardly used very less times in the project.
+anonymous inner class is used mostly in the implementation of abstract classes,interface,ovverriding method concepts.
+if the inner class is static we can access it using outer class name.we can make only inner classes as static.
+if the inner class is non static we use object of outerclass to access inner class members.
+anonymous inner class is placed between semicolon and the constructor
+we don't make outer class static as it is no need to make it static .
+anonymous inner class counts when we count the classes in a program($1).
