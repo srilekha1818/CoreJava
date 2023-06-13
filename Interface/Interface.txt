@@ -52,6 +52,44 @@ class and these methods act as overload methods.
 case3:if two interfaces contain a method with same signature but different return type 
 then it is not possible to implement both interfaces simultaneously.
 
+variables in interface:
+two interfaces having variables as with same name,type then it may cause conflicts
+ it can be resolved by accessing thenm with interface names.
+
+ we can aslo write interface without any abstract method or any variable.
+ Marker Interface:an interface that contains no methods and variables and if our object gets an ability by implementing that
+  interface such type of interfaces can be known as marker interfaces.
+  marker interface/tag interface/ability interface.
+e.g:Serializable,Cloneable,..
+
+By implementing Serializable interface we can send that object across the network and 
+we can save state of an object into the file.
+By implementing Cloneable interface our object is in a position to provide exactly duplicate cloned object.
+
+how objects get ability?
+jvm is responsible for providing required ability.
+why jvm is providing ability to marker interfaces?
+to reduce complexity of the program.
+can we create our own marker interfaces?
+we can but we need to customize jvm.
+adapter class (it is a design pattern allowed to solve the problem of
+ direct implementation of interface methods)
+ --------------------------------------------------------------------------------
+it is a simple java class that implements an interface only with empty implementation fr every method.
+if we implement an interface compulsorily we should give the body for all the methods whether it is required or not.
+this approach increase the length of the code and reduces the reusability.
+--------------------------------------------------------------------------------------------------
+to reduce that length of code we use adapter class .
+instead of implementing the interface directly we opt for adapter class .
+adapter class is a class that implements the interface and gives dummy implementation for all abstract methods of interface.
+if we extend the adapter classes we can easily give body for those methods which are interested in giving the body.
+
+e.g:servlet(i)=>implement=>generic servlet(abstract class) =>extends =>my servlet(class)
+
+
+
+
+
 
 
 

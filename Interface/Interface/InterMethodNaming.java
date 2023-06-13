@@ -4,7 +4,7 @@ interface one{
 }
 interface two{
    // void disp();//one method implementation is enough
-   //int disp(); //we cannot implement two interfaces simultaneously as return type of the methods are different
+   //int disp(); //we cannot implement two interfaces simultaneously when return type of the methods are different
   void disp(int i);
 }
 class InterMethod implements one,two{
