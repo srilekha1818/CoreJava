@@ -22,6 +22,33 @@ interface[100% abstraction]
 abstract class[abstract and concrete methods](implements interface)
 concrete clas(no abstraction ,extends abstract class)
 
+***a class can extends only one class at a time.
+if a class is implementing a interface and extending a class at a time then the order of execution is first comes 
+reusability =>extends and then interface =>implements comes to picture because we have to follow the code already been used an then we can implement that if required.
+e.g:class StudentImpl extends Class implements IClass;
+class StudentImpl implements Class extends IClass gives error.
+***a class can extend a class and can implement any no of interfaces simultaneously.
+***one interface can extends any number of interfaces at  time.
+Interface Methods:
+every method is public and abstract inside the interface:
+public :to make method available for all implementation class
+abstract:implementation class is responsible for providing the implementation.
+There are 11 access modifiers in java in total.
+Interface Variables:
+inside the interface we can define variables.
+every variable in the interface is by default public static final.
+public:to make it available for implementation class object
+static:to access it without using implementation class name.
+final:implementation class can access the value without any modification.
+as the variable is static and final,it must be initialized at the time of declaration.
+since the variable in interface is public static final we cannot use modifiers like private,protected,volatile,transient.
+
+
+
+
+
+
+
 
 
 
