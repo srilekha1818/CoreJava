@@ -43,6 +43,17 @@ final:implementation class can access the value without any modification.
 as the variable is static and final,it must be initialized at the time of declaration.
 since the variable in interface is public static final we cannot use modifiers like private,protected,volatile,transient.
 
+Interface Naming conflicts:
+case1:if 2 interfaces contain a method with same signature and same return type 
+then only one method implementation is enough in implementation class.
+case2:if two interfaces contain a method with same signature but different arguments 
+then we have to provide implementation for both methods in implementation 
+class and these methods act as overload methods.
+case3:if two interfaces contain a method with same signature but different return type 
+then it is not possible to implement both interfaces simultaneously.
+
+
+
 
 
 
