@@ -1,4 +1,4 @@
-package Polymorphism_and_abstraction;
+package CoreJava.Polymorphism_and_abstraction;
 //private String name; private members won' participate in inheritance
 class Plane{
 

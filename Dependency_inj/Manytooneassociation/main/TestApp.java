@@ -1,8 +1,6 @@
-package Dependency_inj.Manytooneassociation.main;
-
-import Dependency_inj.Manytooneassociation.bean.Branch;
-import Dependency_inj.Manytooneassociation.bean.Student;
-
+package CoreJava.Dependency_inj.Manytooneassociation.main;
+import CoreJava.Dependency_inj.Manytooneassociation.bean.Branch;
+import CoreJava.Dependency_inj.Manytooneassociation.bean.Student;
 public class TestApp {
     public static void main(String[] args) {
         Branch branch = new Branch();

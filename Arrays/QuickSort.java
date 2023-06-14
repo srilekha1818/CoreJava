@@ -1,4 +1,4 @@
-package Arrays;
+package CoreJava.Arrays;
 public class QuickSort {
    static void swap(int[] ar,int i,int j){
     int temp=ar[i];

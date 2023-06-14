@@ -1,4 +1,4 @@
-package Dependency_inj.Manytomanyassociation.bean;
+package CoreJava.Dependency_inj.Manytomanyassociation.bean;
 //dependent object
 public class Course {
     String cid; 

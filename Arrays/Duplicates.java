@@ -1,4 +1,4 @@
-package Arrays;
+package CoreJava.Arrays;
 public class Duplicates {
     public static void main(String[] args){
         int [] ar={7,5,5,3,8,1,8,2,5,8};

@@ -1,4 +1,4 @@
-package Strings;
+package CoreJava.Strings;
 public class Pangram{
     public static void main(String[] args){
         boolean s2=false;

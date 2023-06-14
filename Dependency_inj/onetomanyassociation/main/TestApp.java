@@ -1,7 +1,7 @@
-package Dependency_inj.onetomanyassociation.main;
+package CoreJava.Dependency_inj.onetomanyassociation.main;
 
-import Dependency_inj.onetomanyassociation.bean.Departments;
-import Dependency_inj.onetomanyassociation.bean.Employee;
+import CoreJava.Dependency_inj.onetomanyassociation.bean.Departments;
+import CoreJava.Dependency_inj.onetomanyassociation.bean.Employee;
 
 public class TestApp {
     public static void main(String[] args){

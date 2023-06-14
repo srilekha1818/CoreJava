@@ -1,4 +1,4 @@
-package StaticKeyword;
+package CoreJava.StaticKeyword;
 
 public class StaticExecution {
     static int num;

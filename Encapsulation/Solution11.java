@@ -1,4 +1,4 @@
-package Encapsulation;
+package CoreJava.Encapsulation;
 class Solution2 {
     private int num;
     private String name;

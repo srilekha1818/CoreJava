@@ -1,4 +1,4 @@
-package Dependency_inj.onetooneassociation.bin;
+package CoreJava.Dependency_inj.onetooneassociation.bin;
 //dependant object
 public class Account {
     String accNo;

@@ -1,4 +1,4 @@
-package Dependency_inj.Manytooneassociation.bean;
+package CoreJava.Dependency_inj.Manytooneassociation.bean;
 //targeted object
 public class Student {
     String sid;

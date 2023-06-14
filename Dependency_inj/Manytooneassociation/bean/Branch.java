@@ -1,4 +1,4 @@
-package Dependency_inj.Manytooneassociation.bean;
+package CoreJava.Dependency_inj.Manytooneassociation.bean;
 //dependant object
 public class Branch {
     String bid;

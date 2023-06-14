@@ -1,4 +1,4 @@
-package Dependency_inj.primitiveValues;
+package CoreJava.Dependency_inj.primitiveValues;
 
 public class Student {
     //instance variables

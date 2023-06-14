@@ -1,4 +1,4 @@
-package Interface;
+package CoreJava.Interface.Interface;
 
 interface demo1 {
     void m1();

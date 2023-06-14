@@ -1,4 +1,4 @@
-package Dependency_inj.Manytomanyassociation.bean;
+package CoreJava.Dependency_inj.Manytomanyassociation.bean;
 
 public class Student {
     private String sid;

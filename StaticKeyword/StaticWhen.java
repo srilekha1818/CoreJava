@@ -1,4 +1,4 @@
-package StaticKeyword;
+package CoreJava.StaticKeyword;
 
 import java.util.Scanner;
 

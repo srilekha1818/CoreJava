@@ -1,4 +1,4 @@
-package Encapsulation;
+package CoreJava.Encapsulation;
 class Solution1{
   
     /* if data members are not private any one can access it by using the reference.*/

@@ -1,4 +1,4 @@
-package Arrays;
+package CoreJava.Arrays;
 class Subset {
 
 	static boolean isSubset(int arr1[], int arr2[], int m,

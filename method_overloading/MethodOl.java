@@ -1,4 +1,4 @@
-package method_overloading;
+package CoreJava.method_overloading;
 class Sri{
  
 int add(int a,int b,int c){

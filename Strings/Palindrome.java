@@ -1,4 +1,4 @@
-package Strings;
+package CoreJava.Strings;
 public class Palindrome{
     public static void main(String[] args){
         String s1="ni tiN";

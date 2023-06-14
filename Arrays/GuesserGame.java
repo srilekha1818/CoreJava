@@ -1,4 +1,4 @@
-package Arrays;
+package CoreJava.Arrays;
 import java.util.*;
 
 class Guesser{

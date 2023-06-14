@@ -1,4 +1,4 @@
-package Polymorphism_and_abstraction;
+package CoreJava.Polymorphism_and_abstraction;
 
 abstract class Loan1{
     abstract public void dispInt();

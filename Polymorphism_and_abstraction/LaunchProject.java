@@ -1,4 +1,4 @@
-package Polymorphism_and_abstraction;
+package CoreJava.Polymorphism_and_abstraction;
 
 import java.util.Scanner;
 abstract class Shapes {

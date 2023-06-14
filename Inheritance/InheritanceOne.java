@@ -1,4 +1,4 @@
-package Inheritance;
+package CoreJava.Inheritance;
 class Demo{
    //private String name; private members won' participate in inheritance
    String name="srilekha";

@@ -1,4 +1,4 @@
-package innerClass;
+package CoreJava.innerClass;
 abstract class Computer{
     public abstract void disp();
 

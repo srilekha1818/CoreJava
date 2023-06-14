@@ -1,4 +1,4 @@
-package Arrays;
+package CoreJava.Arrays;
 public class SelectionSort
 {
 	void sort(int arr[])

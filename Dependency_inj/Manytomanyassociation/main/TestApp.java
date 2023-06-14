@@ -1,7 +1,7 @@
-package Dependency_inj.Manytomanyassociation.main;
+package CoreJava.Dependency_inj.Manytomanyassociation.main;
 
-import Dependency_inj.Manytomanyassociation.bean.Course;
-import Dependency_inj.Manytomanyassociation.bean.Student;
+import CoreJava.Dependency_inj.Manytomanyassociation.bean.Course;
+import CoreJava.Dependency_inj.Manytomanyassociation.bean.Student;
 
 public class TestApp {
     public static void main(String[] args){

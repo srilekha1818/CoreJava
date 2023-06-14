@@ -1,4 +1,4 @@
-package Dependency_inj.onetomanyassociation.bean;
+package CoreJava.Dependency_inj.onetomanyassociation.bean;
 //dependent object
 
 public class Employee {

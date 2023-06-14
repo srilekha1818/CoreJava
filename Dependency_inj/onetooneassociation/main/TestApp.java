@@ -1,7 +1,7 @@
-package Dependency_inj.onetooneassociation.main;
+package CoreJava.Dependency_inj.onetooneassociation.main;
 
-import Dependency_inj.onetooneassociation.bin.Account;
-import Dependency_inj.onetooneassociation.bin.Employees;
+import CoreJava.Dependency_inj.onetooneassociation.bin.Account;
+import CoreJava.Dependency_inj.onetooneassociation.bin.Employees;
 
 public class TestApp {
     public static void main(String[] args){

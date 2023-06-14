@@ -1,4 +1,4 @@
-package Interface;
+package CoreJava.Interface.Interface;
 //variables
 interface bluetooth{
     boolean wireless=true;

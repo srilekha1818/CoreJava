@@ -1,4 +1,4 @@
-package innerClass;
+package CoreJava.innerClass;
 class outer{
     public void show(){
         System.out.println("show outer");

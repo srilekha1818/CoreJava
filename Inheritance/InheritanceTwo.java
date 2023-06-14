@@ -1,4 +1,4 @@
-package Inheritance;
+package CoreJava.Inheritance;
 
 class Parent {
     int a;
