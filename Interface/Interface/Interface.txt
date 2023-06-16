@@ -86,7 +86,65 @@ if we extend the adapter classes we can easily give body for those methods which
 
 e.g:servlet(i)=>implement=>generic servlet(abstract class) =>extends =>my servlet(class)
 
+When to go interface, abstract class and concrete class?
+interface:: It is prefered when we speak only about specification(no
+implementation).
+abstract class:: It is prefered when we speak about partial implementation.
+concreate class:: It is prefered when we speak about complete implementation and
+ready to
+provide service then we go for concrete class.
+Difference b/w interface and abstract class?
+Interface:: If we dont know anything about implementation just we have requirement
+specification then we should
 
+go for interface.
+
+Abstract class: If we are talking about implementation but not completely then we
+should go for abstract class.
+Interface:: Every method present inside the interface is always public and
+abstract whether we are declaring or
+
+not.
+
+Abstract :: Every method present inside abstract class need not be public and
+abstract.
+Interface:: We can't declare interface methods with the modifiers like
+private,protected,final,static,synchronized,native,
+
+strictfp.
+
+Abstract :: There are not restrictions on abstract class method modifiers.
+Interface:: Every interface variable is always public static final whether we are
+declaring or not.
+Abstract:: Every abstract class variable need not be public static final.
+Interface:: Every interface variable is always public static final we can't
+declare with the
+following modifiers like
+private,protected,transient,volatile.
+Abstract:: No restriction on access modifiers
+Interface:: For every interface variable compulsorily we should perform
+initialisation at the time of declaration,
+
+otherwise we get compile time error.
+
+Abstract:: Not required to perform initialisation for abstract class variables
+at the time of declaration.
+Interface:: Inside interface we can't write static and instance block.
+Abstract :: Inside abstract class we can write static and instance block.
+Interface:: Inside interface we can't write constructor.
+Abstract :: Inside abstract class we can write constructor.
+Note:
+static block => .class file loading happends and used to initialize
+static variables.
+instance block => during the creation of an object,just before the constructor call
+used for initialization instance variable.
+constructor => during the creation of an object, used for initialization
+instance variable.
+What is the need of abstract class? can we create an object of abstract class, Does
+it contains constructor?
+=> abstract class object cannot be created becoz it is abstract.
+
+=> But constructor is need for constructor to initialize the object.
 
 
 
