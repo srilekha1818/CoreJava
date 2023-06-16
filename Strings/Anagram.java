@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Anagram{
     public static void main(String[] args){
-        String s1="race";
+        String s1="racer";
         String s2="care";
         s1=s1.replace(" ","");
         s2=s2.replace(" ", "");
