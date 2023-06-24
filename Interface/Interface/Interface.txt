@@ -146,23 +146,7 @@ it contains constructor?
 
 => But constructor is need for constructor to initialize the object.
 
-eg::
-class Parent {
-Parent() {
-System.out.println(this.hashCode());
-}
-}
-class Child extends Parent {
-public Child() {
-System.out.println(this.hashCode());
-}
-}
-public class TestApp {
-public static void main(String[] args) {
-Child c = new Child();
-System.out.println(c.hashCode());
-}
-}
+
 Why abstract class can contain constructor where as interface doesnot contain
 constructor?
  abstract class =>constructor it is used to perform initialization of the
