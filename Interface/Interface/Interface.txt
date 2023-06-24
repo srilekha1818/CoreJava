@@ -146,6 +146,109 @@ it contains constructor?
 
 => But constructor is need for constructor to initialize the object.
 
+eg::
+class Parent {
+Parent() {
+System.out.println(this.hashCode());
+}
+}
+class Child extends Parent {
+public Child() {
+System.out.println(this.hashCode());
+}
+}
+public class TestApp {
+public static void main(String[] args) {
+Child c = new Child();
+System.out.println(c.hashCode());
+}
+}
+Why abstract class can contain constructor where as interface doesnot contain
+constructor?
+ abstract class =>constructor it is used to perform initialization of the
+object.
+ it is used to provide the value for the instance
+variable.
+ it is used to contain instance variable which are
+requried for child
+ object to perform intialisation for those
+instance variables.
+ interface => every variable is always static,public and final their is no
+chance of existing instance variable inside the class.
+ so we should perform initialisation at the time of
+declaration.
+ so constructor is not required for interface.
+eg#1.
+abstract class Person{
+String name;
+int age;
+int height;
+int weight;
+Person(String name,int age,int height,int weight){
+super();
+this.name=name;
+this.age=age;
+this.height=height;
+this.weight weight;
+}
+}
+class Student extends Person{
+int rollno;
+int marks;
+ Student(String name,int age,int height,int weight,int rollno,int marks){
+super(name,age,height,weight,rollno);
+this.rollno=rollno;
+this.marks=marks;
+}
+}
+Question1:
+ Can reference be created for abstract class?
+ Person p =new Student("sachin",49,5.6f,71,10,100);
+ Can reference be created for interface?
+ ISample sample = null;
+Note::Every method present inside the interface is abstract, but in abstract class
+also we take only abstract methods then
+ what is the need of interface concept?
+abstract class Sample{
+public abstract void m1();
+public abstract void m2();
+}
+interface ISample{
+ void m1();
+ void m2();
+}
+=> we can replace interface concept with abstract class, but it is not a good
+programming practise.
+eg#1
+interface X{
+...
+...
+}
+class Test implements X{
+...
+ ...
+}
+ Test t=new Test();
+
+i. performance is high.
+ii.While implementing X we can extends
+ one more class,through which we can bring reusablity.
+eg#2.
+ abstract X{
+ ...
+...
+ }
+ class Test extends X{
+ ...
+ ...
+ }
+ Test t=new Test();
+i.performance is low.
+ii.While extending X we can't extends
+ any other classes so reusablity is not brought.
+Note: If everything is abstract then it is recommended to go for interface.
+
+
 
 
 
