@@ -1,8 +1,8 @@
-package CoreJava.WrapperClasses;
-class Test {
+
+final class Test {
     int i;
 
-    public Test(int i) {
+    Test(int i) {
         this.i = i;
     }
 
