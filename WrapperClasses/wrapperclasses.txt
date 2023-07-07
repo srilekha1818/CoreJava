@@ -90,3 +90,21 @@ object will be created and those changes
  will not reflected in the old copy.
 Can we make our userdefined class as Immutable?
  ans. yes possible.
+
+ Wrapper class utiltiy methods
+=============================
+1. valueOf() method.
+2. XXXValue() method.
+3. parseXxx() method.
+4. toString() method.
+
+valueOf() method
+================
+To create a wrapper object from primitive type or String we use valueOf().
+It is alternative to constructor of Wrapper class, not suggestable to use.
+Every Wrapper class,except character class contain static valueOf() to create a
+Wrapper Object.
+
+
+
+
