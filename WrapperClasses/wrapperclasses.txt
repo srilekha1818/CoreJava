@@ -17,6 +17,7 @@ Note: If String argument is not properly defined then it would result in
 RunTimeException called
  "NumberformatException".
 eg:: Integer i=new Integer("ten");//RE:NumberFormatException
+toString() => returns hashcode value of the object.
 Wrapper class and its associated constructor
  Byte => byte and String
  Short => short and String
