@@ -122,7 +122,7 @@ Test t= new Test();
 
 t.methodOne(10);//Int arg method
 t.methodOne();//Var arg method
-t.methodOne(10,20,30);//Int arg method
+t.methodOne(10,20,30);//var arg method
 
 }
 }
