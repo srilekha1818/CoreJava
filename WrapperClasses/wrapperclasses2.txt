@@ -111,14 +111,14 @@ We can overload var arg method, but var arg method will get a call only if none 
 matches are found.
 (just like default statement of switch case)
 eg::
-class Test
+class Test3
 {
 public void methodOne(int ...i){System.out.println("Var arg method");}
 public void methodOne(int i){System.out.println("Int arg method");}
 public static void main(String[] args)
 {
 
-Test t= new Test();
+Test3 t= new Test3();
 
 t.methodOne(10);//Int arg method
 t.methodOne();//Var arg method
