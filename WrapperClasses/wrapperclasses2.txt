@@ -197,6 +197,7 @@ primitive and Wrapper type))
 3. Var-Args
 case1::
 Widening vs Autoboxing
+
 class AutoBoxingAndUnboxingDemo {
 public static void methodOne(long l) {
 System.out.println("widening");
@@ -216,3 +217,85 @@ long(binding happens by compiler)
 }
 }
 output: widening
+
+case2::Widening vs var-arg method
+class AutoBoxingAndUnboxingDemo {
+
+public static void methodOne(long l) {
+System.out.println("widening");
+
+}
+public static void methodOne(int... i) {
+
+System.out.println("var-arg method");
+
+}
+public static void main(String[] args) {
+
+int x=10;
+methodOne(x); // primtive ====> do type casting====>
+
+found ==> long(binding happens by compiler)
+
+}
+
+}
+output: widening
+
+Case 3: Autoboxing vs var-arg method :
+class AutoBoxingAndUnboxingDemo {
+public static void methodOne(Integer i) {
+System.out.println("AutoBoxing");
+
+}
+public static void methodOne(int... i) {
+
+System.out.println("var-arg method");
+
+}
+public static void main(String[] args) {
+
+int x=10;
+methodOne(x); // int =====> implicit type casting===>
+
+long,float,double
+
+// int =====> Autoboxing ===> Integer
+
+}
+}
+Output: AutoBoxing
+
+Case4:
+class AutoBoxingAndUnboxingDemo {
+public static void methodOne(Long l) {
+System.out.println("Long");
+}
+public static void main(String[] args) {
+
+int x=10;
+methodOne(x); //CE: can't find the method
+
+}
+}
+Note:
+Widening followed by Autoboxing is not allowed in java, but Autoboxing followed by
+widening is allowed.
+
+Case 5:
+class AutoBoxingAndUnboxingDemo {
+
+public static void methodOne(Object o) {
+System.out.println("Object");
+}
+public static void main(String[] args) {
+
+int x=10;
+methodOne(x); // AutoBoxing ===> int ===> Integer
+// Widening ===> Integer ====>
+
+Number,Object
+}
+
+}
+Output: Object
