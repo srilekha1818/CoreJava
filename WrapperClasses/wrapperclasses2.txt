@@ -311,3 +311,105 @@ Which of the following declarations are valid ?
 8. double d=10 ; // valid(int===> double)
 9. Double d=10 ; // AutoBoxing=> Integer====> Number,Object , so invalid
 10. Number n=10; //AutoBoxing==> Integer ===> Number,Object so valid
+
+new vs newInstance():
+=====================
+1. new is an operator to create an objects , if we know class name at the beginning
+then we can create an object by using
+new operator .
+2. newInstance( ) is a method presenting class " Class " , which can be used to
+create object.
+3. If we don't know the class name at the beginning and its available dynamically at Runtime then we should go for newInstance() method.
+new:
+=====
+generally,
+creating an object of a student class
+Student std1=new Student();
+new keyword is used to create an object to a class.
+new will create a memory on the heap area
+jvm will search for student class file in the current working directory if found then load the .classfile data into method area.
+If the corresponding .class file not available at Runtime then we will get RuntimeException saying NoClassDefFoundError,It is unchecked.
+during the loading of .class file ,static variables will get memory set with default value and static blocks get executed.
+in the heap area,for the required object, memory for instance variables is given jvm will set the default values to it.
+1.execute the instance block if available.
+b.call the constructor to set the meaningful values to the instance variables.
+jvm will give the address of the object to hashing algorithm which generates the hashcode for the object and that hashcode will be returned as the reference to the programmer.
+
+newInstance():
+===============
+Just consider another scenario of taking the input of the classname for which object has to be created at the runtime.
+String className=args[0];
+we will load the class file explicitly by using forName method that is present in class Class 
+Object o=Class.forName(arg[0]).newInstance( );//method chaining
+Class c=Class.forName(className);
+if the dynamic class is not found then it throws ClassNotFoundException.
+during the loading of .class file ,static variables will get memory set with default value and static blocks get executed.
+for the loaded class,object is created using zero parameter constructor.
+Object obj=c.newInstance();
+newInstance() method always expects zero parameter constructor,if zero parameter constructor is not found in that respective class then it throws InstantiationException.
+also,if we keep constructor access as private then it throws IllegalAccessException.
+later,we perform typecasting to create Student object.
+Student std=(Student)obj;
+System.out.println(std);
+
+Note: During typecasting, if there is no relationship b/w 2 classes as parent to
+child then it would result in "ClassCastException".
+
+new
+===
+new is an operator , which can be used to create an object.
+We can use new operator if we know the class name at the beginning.
+Test t= new Test( );
+If the corresponding .class file not available at Runtime then we will get
+RuntimeException saying NoClassDefFoundError,It is unchecked.
+To used new operator the corresponding class not required to contain no argument
+constructor.
+newInstance( )
+============
+newInstance( ) is a method , present in class Class , which can be used to create
+an object .
+We can use the newInstance( ) method , If we don't class name at the beginning and
+available dynamically Runtime.
+Object o=Class.forName(arg[0]).newInstance( );
+If the corresponding .class file not available at Runtime then we will get
+RuntimeException saying ClassNotFoundException , It is checked.
+To used newInstance( ) method the corresponding class should compulsory contain no
+argument constructor , Other wise we will get
+RuntimeException saying InstantiationException.
+Difference between ClassNotFoundException & NoClassDefFoundError :
+1. For hard coded class names at Runtime in the corresponding .class files not
+available we will get NoClassDefFoundError ,
+which is unchecked
+
+Test t = new Test( );
+In Runtime Test.class file is not available then we will get
+
+NoClassDefFoundError
+2. For Dynamically provided class names at Runtime , If the corresponding .class
+files is not available then we will get the
+RuntimeException saying "ClassNotFoundException".
+
+Ex : Object o=Class.forname("Test").newInstance( );
+At Runtime if Test.class file not available then we will get the
+ClassNotFoundException , which is checked exception.
+
+Note:
+new will create a memory on the heap area
+Student => JVM will search for Student.class file in Current Working Directory
+if found load the .class file data into MethodArea
+During the loading of .class file
+a. static variables will get memory set with default vaalue
+b. static block gets executed
+
+In the heap area, for the required object memory for instance variables is given
+jvm will set the default values to it
+a. Execute the instance block if available
+b. call the constructor to set the meaningful values to the instance
+varaibles.
+JVM will give the address of the object to hashing algorithm which generates the
+hashCode for the object and that hashCode
+will be returned as the reference to the programmer
+new => requried class details known to compiler but not available at jvm then it
+would result in "NoClassDefFoundError"
+newInstance() => requried class details not available at jvm then it would result
+in "ClassNotFoundException"
