@@ -1,0 +1,18 @@
+1.lambda expression and functional interface work together.
+2.functional interface :interface means collection of public abstract methods,if in any interface there is only one abstract method that interface 
+can be known as functional interface and by any chance if we are implementing that interface using lambda expression then it should only contain only one abstract method and should not have more than
+one abstract method for which we are using an annotation called @FunctionalInterface.
+this annotation gives the additional information to the compiler and also to the developer that the interface is writing for the purpose of lambda expression,for that particular interface do not add one more abstract method even 
+if added then compiler throws the error.
+funtional interface can be implemented by any class but we implement using lambda expressions. 
+can we write lambda expression without fucntional interface?
+no.we cannot write lambda expression without single abstract method.
+
+in java8,they introduced (->) operator which is known as arrow or lambda operator to write lambda expression.to the right of lambda operator write body/implementation.
+to the left of the lambda operator give parameters required.while writing the body of the lambda expression if there is only single statement,then curly brackets are optional.
+left side for parameters datatype is optional.
+left side if parameter is single then () and type of data both optional.
+right side in body if its single line implementaion then return statement is also optional.
+{} is mandtaory if there are more then one statement and also if there is return statement explictly used by developer
+
+lambda expressions depend on functional interface.
