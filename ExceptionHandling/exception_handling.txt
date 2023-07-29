@@ -1,0 +1,27 @@
+Exception:it's an unwanted event that occur during runtime which will result abrupt termination of the application.
+Exception Handling:it is a process of handling exception in such a way because of which abnormal termination of your application should not happen.
+
+checked exception:if compiler itself identified the exception by seeing the code,then those exceptions are checked exceeptions.
+unchecked exception:if the exceptions are not checked or not identified by the compiler then those exceptions are unchecked exceptions.
+
+Behind the scenes of exceptions:
+whatever the logic of the application,we write in methods and these methods gets executed in the run time stack.if one of the method is having some exception 
+then it creates an exception object in that stack area and send it to jvm then jvm checks if that exception is handled in program in that stack frame.if we write the 
+exception handling code then 
+it will get executed and continues the next code execution after executing handling code lines.if we haven't written the exception handling code then the default exception handler of java throws 
+the exception and causes abrupt termination of application.
+
+Exception handling is done by using try and catch block.
+try{
+//risky code
+}
+catch(inbuilt classes){
+//exception handler code
+}
+
+the risky code that may cause exception is placed in try block.and if the exception is raised in try block then code after 
+the exception raised line did not get executed and jvm executes the catch block code which consists of inbuilt classes with exception handler code,
+ater executing the catch block code then the code lines after the catch block gets executed smoothly.
+if there is no exception raised in try block the catch block wouldn't get executed at all.
+import java.util.Scanner;
+
