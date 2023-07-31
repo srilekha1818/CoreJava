@@ -23,5 +23,38 @@ the risky code that may cause exception is placed in try block.and if the except
 the exception raised line did not get executed and jvm executes the catch block code which consists of inbuilt classes with exception handler code,
 ater executing the catch block code then the code lines after the catch block gets executed smoothly.
 if there is no exception raised in try block the catch block wouldn't get executed at all.
-import java.util.Scanner;
+
+ExceptionHandling part2:
+we know that whenever a method consists/raised some exception then it creates an exception object and it goes to jvm.
+what that exception object consist?
+exception object contains the name of the exception,description of the exception and stack trace of the exception.
+if an exception got raised in any method and it is not handled,directly default exception handler won't get involved but behind the scenes 
+firstly,jvm checks if the respective method handled the exception or not 
+then it checks the caller method and check if the exception is handled in caller method if it is not handled in caller method too then jvm 
+informs to default exception handler and it terminates the application abruptly.
+whenever there is an exception what we can do?
+1. handle the exception(try,catch)
+2. duck the exception(throws)
+3. Re-throwing an exception(throw,finally)
+i)using try and catch blocks in the code refers to handling the exception.
+ii)ducking the exception is a case it is not recommended to follow but to inform the caller method that the method it is calling consists of an exception,
+we use throws keyword in the respective method causing the exception.
+throws keyword used at the method signature.
+Handling exception is recommended mostly than ducking the exception.
+iii)Re-throwing an exception is the case where the exception object is thrown/propagated forcibly,explicitly to the caller method.code lines after the throw line won't get excecuted 
+and this throw keyword is used in the catch block.
+in the critical information case,we use finally keyword to execute the code after the throws keyword.
+if the exception may raised or not but the finally block gets exceuted irrespective of exception.
+
+Exception Handling part 2-continuition
+3 methods that we write usually inside the catch block:
+getMessage():print the description of the exception
+toString():print the name and the description of the exception.
+printStackTrace():prints the name and description of the exception along with the stack trace.
+
+fully checked exception:An Exception is said to be fully checked if and only if all the child classes are also checked exception, 
+otherwise it is called partially checked exception. 
+In Java, exceptions under Error and RuntimeException classes are unchecked exceptions, everything else under throwable is checked. 
+Throwable:-it is a partially checked exception, as 
+it's subclasses include both checked and unchecked Exceptions.
 
