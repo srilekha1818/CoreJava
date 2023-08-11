@@ -1,0 +1,103 @@
+MultiThreading-part1:
+
+i) MulitTasking:
+Executing several tasks simultaneously is the concept of multitasking.
+There are 2 types of Multitasking.
+a. Process based multitasking
+b. Thread based multitasking
+
+a. Process based multitasking:
+In process based multitasking, context switching is handled by os(operating system) that is hardweight as each task is considered as an independent process.
+eg:: typing a java pgm
+listening to a song
+downloading the file from internet
+Process based multitasking is best suited at "os level".
+
+b. Thread based multitasking:
+Executing several tasks simulatenously where each task is a seperate independent
+part of the same Program, is called
+"Thread based MultiTasking".
+Each independent part is called "Thread".
+In Thread based multitasking,context switching is handly by jvm using threads concept as each task is considered as a thread.
+where we use Thread based Multitasking:
+1. This type of multitasking is best suited at "Programatic level".
+The main advantages of multitasking is to reduce the response time of the
+system and to improve the performance.
+2. The main important application areas of multithreading are
+a. To implement mulitmedia graphics
+b. To develop web application servers
+c. To develop video games
+d. To develop animations
+3. Java provides inbuilt support to work with threads through API called
+Thread,Runnable,ThreadGroup,ThreadLocal,...
+
+What is thread?
+The Seperate flow of execution is called "Thread".
+if there is only one flow then it is called "SingleThread" programming.
+For every thread there would be a seperate job i.e each thread can be considered as a seperate task.
+B. In java we can define a thread in 2 ways
+a. Implementing Runnable interface
+b. extending Thread class
+1. Extending Thread class
+=> we can create a Thread by extending a Thread.
+
+class MyThread extends Thread{
+@Override
+public void run(){
+for(int i=0;i<10;i++)
+System.out.println("child thread");//child thread
+
+}
+}
+
+defining a thread(writing a class and extending a Thread)
+job a thread(code written inside run())
+class ThreadDemo{
+public static void main(String... args){
+MyThread t =new MyThread();//Thread instantiation
+t.start();//starting a thread
+;;;; // At this line 2 threads are there
+for(int i=1;i<=5;i++)
+System.out.println("Main Thread");//main thread
+
+}
+}
+Behind the scenes
+1. Main thread is created automatically by JVM.
+2. Main thread creates child thread and starts the child thread.
+That's the reason mostly main thread gets executed in the program but in MultiThreading we can't predict the exact output only possible output we can expect.
+If multiple threads are waiting to execute,then which thread will execute 1st is
+decided by ThreadScheduler which is part of
+JVM.
+
+case2: diff b/w t.start() and t.run()
+if we call t.start() and seperate thread will be created which is
+responsible to execute run() method.
+
+if we call t.run(), no seperate thread will be created rather the method
+will be called just like normal method by main
+
+case3:: Importance of Thread class start() method
+For every thread, required mandatory activities like registering the thread with
+Threadscheduler will be taken care by
+Thread class start() method and programmer is responsible of just doing the job of
+the Thread inside run() method.
+start() acts like an assistance to programmer.
+
+We can conclude that without executing Thread class start() method there is no
+chance of starting a new Thread in java.
+Due to this start() is considered as heart of MultiThreading.
+
+case4:: 
+If we are not Overriding run() method then Thread class run() method will be
+executed which has empty implementation and
+hence we wont get any output.
+eg::
+class MyThread extends Thread{}
+class ThreadDemo{
+public static void main(String... args){
+MyThread t=new MyThread();
+t.start();
+}
+}
+It is highly recomended to override run() method.
