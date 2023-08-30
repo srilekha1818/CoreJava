@@ -1,0 +1,556 @@
+Collections in Java: It is a framework, API, Hirerachy as it is already developed or coded and we just use that code/data that is already available by understanding the requirements.
+The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+Genrally to store data we use variables.when it is the case of large data we use arrays as it is an indexed based data structure where we can store Large volume of similar type of data or Homogeneous data.
+Disadvantages of Array:
+Array cannot store hetrogeneous data. 
+size is fixed 
+it demands Contiguous memory locations.
+we do not have inbuilt methods to perform operations.
+directly we cannot perform operations.
+indirectly we can do by using built-in class called Arrays.
+
+But,when the data is large and the data is not of similar type for example,in our id card we have different types of data like name,id,phone number that are different data types.Here comes the collection concept.
+Before adding collection concept in java:
+ Problem faced in storing Large volume of data
+Java provides in built classes. lack of uniformity is seen in those in built classes. 
+they failed to manage large volume of data.
+to perform operations on the large volume of data was 
+difficult in those days.
+Collection API:
+java is open source from that time and anyone can contribute to java.
+Joshua => a computer scientist, he obsevered the problem and contributed the solution.he created one API or entire hierarchy.hierarchy consists of collection of Interfaces and Classes.Each classes have many in-built classes.he proposed this solution to sun micro system team and named it as collection.from Java 1.2 Collection API got added in java.it is an API, hierarchy and framework.someone already coded and developer has to use it.
+
+Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion,  manipulation, and deletion.
+Java Collection means a single unit of objects. Java Collection framework provides many interfaces (Set, List, Queue, Deque) and classes (ArrayList, Vector, LinkedList,PriorityQueue, HashSet, LinkedHashSet, TreeSet).
+
+The entire hierarchy it is collection of major 7 classes 
+1. ArrayList ->Inbuilt class
+2. LinkedList
+3. Array Deque
+4. Priority Queue
+5. Treeset
+6. Hashset
+7. LinkedHashset
+Above classes divided using three interfaces.
+1. List(I)-  ArrayList, LinkedList
+2. Queue(I)- Array Dequeue, priority
+3. set(I)  - Treeset, Hashset, LinkedHashset
+
+Each classes follow it's own data structure to store data In their own way there store data by this performing operation become easy.to perform operation there are so many in built methods are  present.
+All above classes are present in util package.
+Arrays, String  are present in lang package.
+To use any of the collection classes we need to import.
+eg: import java.util.*;
+In collection whatever data we add it gets stored as an object.
+1.ArrayList:
+1.	ArrayList ->List(I) it is in built class of collection API. ArrayList internally it follows Dynamic Array Data Structure.every inbuilt class follows specific data structure.if classes is used to store data the data in the memory is stored by following structure.
+2.	ArrayList implements List interface.
+3.	ArrayList is dynamic in nature.
+4.	To use any of the collection classes we need to import.
+                     eg: import java.util.*;
+       5.Indexed based accessing is allowed.
+6.Duplicates are allowed.it is from list interface.
+7.efficient for insertion and deletion at rear end 
+8.using inbuilt methods we can perform operation on it.
+Dynamic Arary -> as we add the elements Dynamiclly at the rear end it will grow.Last place of array we call it as rear end.
+A Dynamic array automatically grows when we try to make an insertion.
+Size will grow based on data.
+
+Important points.
+1. In collection whatever data you add it stores as an object.
+2. By using ArrayList we can store Homogenous data and Heterogenous data.
+3. we can add entire collection into another collection.
+4. whenever method is accepting we must pass the arguments and when method is returning something we have to collect.
+5. Size is growing and shrinking
+6. we are able to add object in ArrayList at any given point.
+At front, middle and rear.
+7. efficient and easy to add data in rear end.
+8. when we add elements in middle it replaces the element  at particular index by shifting the element present in that place to the next index.
+9. ArrayList stores large amount of data.
+eg:
+Existing data[11, 12, 13, 14, 15]
+After replacing data in 2nd index[11, 12, 28, 13, 14, 15]
+After replacing data in front end[5, 11, 12, 28, 13, 14, 15] replacing elements in front and middle is not recommended.it is time consuming.
+it is not efficient because of shifting object to next index.
+9. In ArrayList Index based access is allowed.we can access the data by using index.
+Example-1: ArrayList Example
+Code Explaination:
+ArrayList is in built class.
+add() is a method which is accepting object.
+homogenous data is allowed.same type of data can be added.
+In collection whatever data you add it stores as an object.
+al1-> 10,20,30
+addAll accepts entire collections.add method is accepts object and index both.
+By using ArrayList we can store Homogenous data and 
+Heterogenous data.
+we can add entire collection into another collection.
+we can replace the element in collection with the  other element.
+
+2. LinkedList -it is an inbuilt class that is a  part of two interfaces List and Dequeue.it internally follows doubly linked list data structure.
+Homogenous and Heterogenous data can also be stored.
+nodes
+->ram->it is a collection of bytes
+->wherever byte is the value get added and linked with nodes
+
+
+           node-1  ------------->   node-2 -------------> node-3         10     <-------------    20    <------------    40
+
+
+
+Important points
+1. here when we add data no shifting takes place but it takes new node and link with it.
+ll1.add(1,30);
+        node-1  ------------->   new node  ----------> node-2 -------------> node-3 
+               10     <-------------       30       <---------   20    <------------    40
+It is efficent and faster way to add  object to collection.
+2. based on index we can add data in collection.
+3. we can add entire collection into another collection.
+4. There two methods which are not present ArrayList but present in LinkedList.
+Adding element in First - addFirst()
+Adding element in Last  - addLast()
+5. both of the classes we can store Heterogenous and Homogenous data.
+6. whenever in a collection if data has to add at front end, rear end and given position then LinkedList is recommended.
+7. LinkedList uses disperse memory allocation. no need of bytes to available continously.
+8. LinkedList is efficent than ArrayList.
+9.It is recommended use LinkedList to perform insertion operation.
+10. Duplicate data is allowed in ArrayList and LinkedList.
+eg:
+	LinkedList ll1=new LinkedList();
+	ll1.add(10);
+	ll1.add("ineuron");
+	ll1.add(20);
+                ll1.add(20);
+	System.out.println(ll1);
+
+output: [10, ineuron, 20, 20]
+
+
+
+Example-1:LinkedList Example
+
+Important Question??
+1Q. After these classes is array concept is gone or outdated.
+Ans- No
+When we have to store Large data we can go with Arrays or Collection(ArrayList, LinkedList..)
+2Q-when to use Array over ArrayList?
+Ans- whenever size of the data is known to you and if you are sure that data or information is homogenous or similar type then you must go with array.
+Array is faster than ArrayList. ArrayList is collection. it store as object internally primitive data is converted into object in ArrayList.for object memory  has to be created and it has to be stored.new instance has to be created and then the data will be stored.
+In Array we can store primitive data and object data.Array is object but we inside it is primitive.Array is faster than than ArrayList. internally in ArrayList Autoboxing will happen.
+->Autoboxing -> converting primitive data into object.
+Operations on ArrayList:
+Important things to observe when we use inbuilt methods.
+1. what data accepting by in built method. 
+2.What that method returns.
+
+ArrayList Important Points
+1. ArrayList stores large amount of data.
+2. it stores both homogenous and heterogenous.
+3. internally follows Dynamic array data structure.
+4. Indexed based accessing is allowed.
+5. Duplicates are allowed.
+6. efficient for insertion and deletion at rear end 
+7. it is from list interface.
+8. using inbuilt methods we can perform operation on it.
+
+//Operations on LinkedList
+1. LinkedList- it follows LinkedList
+->nodes and Links with previous and next node.
+->we can perform insertion operation at any given position.
+->we can add entire collection another collection.
+->it will store data as an object.
+->it follows two interface List(I) and Deque(I) -a part of Qeue
+->directly it implements two  interfaces.
+->some extra methods are presnet because it implement two interfaces.
+->Duplicate are allowed in LinkedList.
+->Index Based access is allowed.
+
+
+Methods:addFirst(),addLast()
+
+->Difference between offerFirst(), offerLast() and AddFirst(), AddLast() method
+->offerFirst() and AddFirst() are similar 
+->In case of offerFist() and offerLast() methods the data may add or not.
+->In case of addFirst() and addLast() methods the data compulsorily gets add to the collection.
+
+3. Arary Deque
+->it will work like dynamic array data structure.
+->it internally follows Double eneded Queue data structure.
+->Qeue - FIFO
+->Index based accessing is not allowed in Array Deque.
+->Double eneded Queue -> insertion and deletion happens at  front end and reat end.
+
+  front end <--------------->rear end 
+   Insertion/                 Insertion/Deletion
+   Deletion
+
+->Duplicates are allowed in Array Deqeue.
+ eg:ArrayDeque ad= new ArrayDeque();
+		ad.add(30);
+		ad.add(30);
+
+
+=>Important Points on Array Deqeue
+1. It follows Double ended queue data structure.
+2.Good for insertion/deletion at front end and rear end.
+3.it is implementing deque(I) interface.
+
+4. Proirity Queue
+->it follows Min-Heap Data Structure to store data.
+->it implements Queue(I) interface.
+->All collection classes present in util package.
+->In order to use any class in java we have to create object  of the class.
+
+->we can add entire collection to other collection.
+->Index based accessing is not allowed.
+->Order of insertion is maintained in ArrayList, LinkedList  and ArrayDeque.
+->Order insertion is not maintained in Priority Queue
+->Priority Queue is used when we want element with high priority  is available at the begining of the collection.
+->In entire collection element with high priority available at the begining of the collection.
+  eg: 10,50,100,125,55
+->In above sequence 10 has highest rank so it is available at  the begining.
+->Priority Queue follows min-heap data structure.
+->input:    100 50 150 25 75 125 175
+->output: [25, 50, 125, 100, 75, 150, 175]
+->it is not in sorting order.
+->whichever is the highest priority element automatically that will come above all.
+
+How min-heap data structure works?
+
+step-1: 100 will be added at the beginning because it rank is  high.
+->In entire collection element with high priority available at the begining of the collection.
+step-2: 50 Comes to the left of 100 and comparision is made.
+-> in min-heap data strcuture whichever lower numbers comes up and upper numbers comes down.
+->here 100 is higher number than 50 it comes to down and 50  goes to up.
+->swapping is done between 100 and 50.
+          100              swapping                50
+        50                 -------------->      100   
+
+
+
+
+
+Step-3: 150 added and comes to right of 50 and it is compared with 50.here 150 is higher than 50 and 150 is at down so need to swap.1
+
+eg:           50        100          150   ==>no swapping
+step-4: 25 added left to 100. 25 is lower than 100. so 25 goes to up and 100 comes to down.
+->whichever lower numbers comes up and upper numbers comes down.
+->swapping is done between 100 and 25.
+eg:           50            swapping                 50
+      100          150   -------------->     25          150
+  25                                   100
+step-5: 50 and 25 gets swapped 
+             25
+      50                150 ==>Swapping
+100
+
+->swaping happens at parent level not on sibiling level.
+
+//step-6: 75 added to left of 50 and no swapping is done because 75 is greater than 25. 75 will be donw to 50.
+
+//               25
+//      50                150
+//100         75
+
+step-7: 125 added to left of 150
+->swapping is done between 125 and 150.
+->whichever lower numbers comes up and upper numbers comes down.
+   
+            25                  swapping                  25
+    50                150     ----------->       50               125
+100         75      125                     100         75     150        
+
+step-8: 175  is added to right to 150. 175 is higher than 150 and it is in down  to 152.so need to swap.
+
+               25
+       50                 125          ==>no swapping is done
+  100        75       150     175
+
+final output: 25 50 125 100 75 150 175
+
+            25                           0th level     
+     50                 125              1st level
+  100        75       150        175       2nd level    
+
+
+->Irrespective of inserting data if we want high priority of the element should come at front the collection then we have go with Priority queue.
+Conclusion:
+->Internally every collection class follows a particular data structure.
+->Priority class follows Min-heap data structure.
+->highest priority element comes above all or begining of the list in priority queue.
+->whichever lower numbers comes up and upper numbers comes down.
+
+=>Searching operation on Collection classes.
+
+ArrayList ->Dynamic array
+al-> 100 50 150 25 75 125 175
+  0  1   2   3 4   5   6 
+
+->we have to search 200 in ArrayList.
+key= 200;
+->searching is done by accessing each element and compare with key.
+->time complexity of searching operation in ArrayList is O(n).
+->searching operation is time consuming in ArrayList.
+
+2. LinkedList -> Doubly LinkedList
+eg:
+ 100   50  150  25  75   125  175
+->Stored in node and linked with each other.
+->we have to search 200 in LinkedList.
+  key= 200;
+->How much ever elements is that much comparision is made.
+->in above linked list there are 7 objects so 7 comparisions  has to made.
+->here we have to go every node and compare.
+->so time complexity is O(n);
+
+3. Array Deque ->Double end Queue
+-> it also Dynamic in nature.
+->it also demands contigeous memory allocation.
+->eg: 100 50 150 250 75 175
+
+->we have to search 200 in ArrayDeque
+key:200
+
+->->How much ever elements is that much comparision is made.
+->so time complexity is O(n);
+
+
+4. Priority Queue
+->it follows min-heap data structure.
+             25
+       50             125
+100        75    125        175
+
+->we have to search 200 in Prority Queue
+key:200
+->In this case while searching it will go every node and  compare the key.
+->How much ever elements is that much comparision is made.
+->so time complexity is O(n);
+
+
+Every class have it's Efficiency
+1. ArrayList
+->ArrayList is efficient to perform insertion operation at  rear end.  
+->it follows Dynamic Array data structure. how many added to  it the size get increases according to it.
+
+2. LinkedList -> it follows Doubly LinkedList data structure.
+->where we can make use of disperse memory allocation and it can link each other wherever node is present.
+
+3. Array Deque-> it follows Double end deque
+4. Priority Queue
+->Priority to follows min heap data structure.
+->where the highest priority element available at the  beggining the collection.
+
+->Above all of them are good for insertion operation but when it comes to quick search operation all these classes fails.
+->That is when we have binary search tree data structure which  also called balanced binary search tree data structure.
+
+5. TreeSet
+->it follows Binary search tree data structure to data.
+->output is ascending sorted order.
+->If data has to be ascending sorted order after inserting data we can go with TreeSet.
+->it will not maintain the order of the data.
+->it gives the result in the form of ascending sorted order.
+
+->eg: 100 50 150 25 75 125 175
+ output: [25, 50, 75, 100, 125, 150, 175]
+->In case of binary tree set the second data is directly compared   with the first data. 
+->if second data is less than first data it takes left side of first data.
+->if second data is more than first data it takes right side of first data.
+
+
+5.1 How data is stored in TreeSet?
+step-1: 100 is inserted
+step-2: 50 is added after 100 and it is compared with 100. 
+->50 is smaller than 100 so it occupies left side of 100.
+->if second data is less than it takes left side of first data.
+->if second data is more than 100 it takes right side of first data.
+
+step-3: 150 is greater than 100 hence it occupies right side   space.
+
+				100
+		  50             150
+
+step-4: 25  is less than 100 and 50 so it takes left side space of 50.
+				100
+		  50             150
+   25
+
+step-5: 75 is less than 100 and greated than 50 so it takes 
+      right side of 50.
+
+				100
+		  50             150
+  25       75
+                      
+step-6: 125 greater than 100 and less than 150 so it occupies space left side to 150,
+
+				 100
+		  50              150
+  25       75      125 
+
+step-7: 175 is greater than 100 and greater than 150 so it occupies space right side to 150.
+
+				 100
+		  50              150
+   25       75      125       175
+
+
+=>Output when we data insertion is given to TreeSet
+
+				 100
+		  50              150
+  25       75      125       175
+
+->output: [25, 50, 75, 100, 125, 150, 175]
+
+->TreeSet follows in-oder traversal.
+->Left Value Right
+->if we want to iterate the values from collection of TreeSet
+  we have to follow in order traversal way.
+->in order, pre oreder and post order treversal.
+
+5.2 Searching element in TreeSet class
+//key=200
+
+Collection - 25, 50, 75, 100, 125, 150, 175
+
+
+				 100
+		  50              150
+ 25       75      125       175
+
+seraching 200 in collection.
+->step-1: first it goes to 100. 200 is greated than 100.
+          then it goes to right(150).
+->step-2: 200 compared to 150. 200 is greater than 150.
+			then it goes to right.
+->step-3: 200 is compared with 175. 200 is greater than 175
+       
+->key not found.
+->7 objects are present in the collection.
+->In order to search a key 3 comparisons are made. 
+->Time complexity - O(log2N)
+
+5.3 Conclusion:
+->by following Binary Search Tree data strucutre if tree become balanced tree then searching  operation is very easy.
+->if data is stored in structure if you want to get   or iterate the data we have to follow in-order travesral.
+
+5.4 Methods in TreeSet
+
+Ceiling method-
+->if object is present it will give the object.
+->if object is not present it will give nearest higher object.
+eg: ts.ceiling(50)
+
+floor method -
+->if object is present it will give the object.
+->if object is not present it will give nearest Lower object.
+eg: ts.floor(50)
+
+higher method
+->it gives higher value of the object. it will not check the 
+the object is present or not in collection.
+eg: ts.higher(50)
+
+Lower method
+-> it gives lower value of the object. it will not check the 
+the object is present or not in collection.
+eg: ts.lower(50)
+
+
+
+->Skewed Binary Search tree
+
+  		10
+            	20               
+                            30
+						 40
+							50
+								60									                                           70
+
+->Checking whether key=100 in collection.
+=>7 objects are there in TreeSet 
+->for searching key here we are having 7 comparisons.
+->Time complexity- O(n)
+->these structure we call it as Skewed tree.
+Balance Binary Search Tree
+
+				     100
+	      50                              150
+   25       75      125        175
+
+
+ =>Conclusion
+->if we store data in TreeSet it follows Binary search tree data structure.
+->Binary data structure will applied to the added data.
+->by following data structure if data is stored if end result  is balanced search tree. Then searching operation is good.
+->after store data if end result is not balanced binary  search tree rather skewed search tree in that case even using TreeSet the searching takes time complexity O(n).
+->maximum number of comparisions are made.
+->Order insertion is not maintained TreeSet.
+->it gives the result in the form of ascending sorted order.
+->if we are storing data in TreeSet at the end final result is  balanced Binary search tree then it is good perfrom searching operation.
+->if end result is Skewed Binary search tree it is not good  perform searching operation. it also takes same comparisons like  other classes.
+
+6. Hash Set
+->It will follow Hashing algorithm.
+->There will be Hash Function and associated Hash table with  loading factor 75%.
+->Hash table will have buckets where data will be stored.
+->HashSet-> combination of Hash Function and Hash Table.
+->Data stored in hash table based on the formula.
+->Load factor of Hash table is 75% that means if 75 percent of  the buckets in hash table are filled then automatically Hash table becomes double.
+->In order to avoid data collision the hash table becomes double.
+->Every time data is added based on the hash function the 
+data goes and sit in the specific location in hash table.
+
+
+
+6.2 Storing Data in Hash Table
+->Hash tables have buckets.
+->When data is given to Hash function it stores data in Hash
+tables based on the formula of hash function.
+->eg:
+let say formula be x%10
+
+       Hash function(x%10)                      Hash table
+data                  formula
+100 --> 1+0+0=1 ----> 1%10 =1          100               50
+50  --> 5+0=5   ----> 5%10=5            1		2	3	4	5	6	7	8	9	10    
+
+Data stored in hash table based on the formula.
+
+
+6.3 Searching data in Hash Table
+key be 200
+
+            Hashing Table
+ 100 80  60  8   4   50  16  17  98  63
+-> 1	 2	3	4	5	6	7	8	9	10
+
+->Hash fucntion(x%10)
+key=200 --> x=2+0+0=2 --> 2%10=2 
+it checks 200 in index 2. 
+->here 10 objects in hash table. 
+->in order to search we had 1 comparision.
+->Time complexity O(1)
+->searching algorithm is very fast 
+->In order have fast searching algorithm go with HashSet and  Link HashSet.
+
+6.4 Conclusion
+->HashSet follows Hashing algorithm behind the scene it works with combination of Hashing function and Hash Table. 
+->data will be stored in individual buckets present in hashtable.
+->whenever searching operation is perfromed because of the   formula in hash function it goes and search in specific bucket  only.
+6.5 Important Points on HashSet
+->Order of insertion is not preserved.
+->HashSet will not maintain order of insertion.
+->Whenever there is need of searching operation it becomes fast.
+->In order to maintain order of insertion there is sub class(Child class) of HashSet which is called LinkedHashSet
+
+6.6 Importance Points on LinkedHashSet
+->LinkedHashSet is sub class of HashSet and it also follows 
+  Hashing algorithm behind the scene.
+->LinkedHashSet maintains the order of inseriton.
+->Go with LinkedHashSet if you want to maintain order of  insertion and also follow hashing algorithm.
+
+
+>these are the major 7 classes in collections
+->Later they added Vector and Stacks. 
+->stacks are child class of vector.
