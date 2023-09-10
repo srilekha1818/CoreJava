@@ -554,3 +554,5 @@ it checks 200 in index 2.
 >these are the major 7 classes in collections
 ->Later they added Vector and Stacks. 
 ->stacks are child class of vector.
+
+
