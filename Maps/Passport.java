@@ -12,28 +12,68 @@ class Information
 	private int age;
 	private String fatherName;
 	private String city;
-	public Information(String name , int age, String fatherName, String city)
-	{
-		this.name=name;
-		this.age=age;
-		this.fatherName=fatherName;
-		this.city=city;
-		
-	}
-	
-	
 	public String getName() {
 		return name;
 	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
 	public int getAge() {
 		return age;
 	}
+
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+
+
 	public String getFatherName() {
 		return fatherName;
 	}
+
+
+
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
+	}
+
+
+
 	public String getCity() {
 		return city;
 	}
+
+
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+
+
+	
+	
+	
+
+	public Information(String name, int age, String fatherName, String city) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.fatherName = fatherName;
+		this.city = city;
+	}
+
+
+
 	@Override
 	public String toString()
 	{

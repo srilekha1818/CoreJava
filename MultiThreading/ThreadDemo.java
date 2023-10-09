@@ -13,7 +13,7 @@ System.out.println("child thread");//child thread
 //job a thread(code written inside run())
 public class ThreadDemo {
 public static void main(String... args){
-MyThread t =new MyThread();//Thread instantiation
+	MyThread t=new MyThread();//Thread instantiation
 t.start();//starting a thread
 ;;;; // At this line 2 threads are there
 for(int i=1;i<=5;i++)

@@ -162,47 +162,8 @@ Returns the no of characters present in the file.
 8. boolean delete();
 To delete a file or directory
 
-Requirement:
-Requirement: Write a program to display the names of all files and directories
-present in D:\\Java Job Guarantee Batch
-Requirement: Write a program to display only file names.
-Requirement: Write a program to display only directory names.
-import java.io.*;
-class Test
-{
-public static void main(String[] args)throws Exception
-{
-int dirCount = 0;
-int jpgFileCount = 0;
-int txtFileCount = 0;
-int zipFileCount = 0;
-String location = "D:\\Java Job Guarantee Batch";
-File f= new File(location);
-String[] names = f.list();
-for(String name : names){
-// D:\\Java Job Guarantee Batch
-// all files we are iterating
-File f1 = new File(f,name);
-if (f1.isDirectory())
-dirCount++;
-if(f1.isFile()){
-if (name.endsWith(".png"))
-jpgFileCount++;
-if(name.endsWith(".txt"))
-txtFileCount++;
-if(name.endsWith(".zip"))
-zipFileCount++;
 
-}
-System.out.println(name);
-}
-System.out.println("Total no of JPGfiles is :: "+jpgFileCount);
-System.out.println("Total no of txtfiles is :: "+txtFileCount);
-System.out.println("Total no of Zipfiles is :: "+zipFileCount);
-System.out.println("Total no of Directory is :: "+dirCount);
-}
-//JVM shutdown now
-}
+
 FileWriter:
 By using FileWriter object we can write character data to the file.
 Constructors:
@@ -228,24 +189,7 @@ To give the guarantee the total data include last character also written to
 the file.
 5. close();
 To close the stream.
-eg#1.
-import java.io.FileWriter;
-import java.io.IOException;
-public class TestApp {
-public static void main(String[] args)throws IOException {
-FileWriter fw=new FileWriter("abc.txt");
-fw.write(73);
-fw.write("neuron\nTechnology\nPrivate\nLimited");
-fw.write("\n");
-char ch[] ={'a','b','c'};
-fw.write(ch);
-fw.flush();
-fw.close();
 
-}
-}
-A new file will be created automatically
-abc.txt
 =======
 Ineuron
 Technology
@@ -279,16 +223,4 @@ the no of characters copied from the file into char[] array.
 5. File f=new File("abc.txt");
 6. Char[] ch=new Char[(int)f.length()];
 7. void close();
-eg#1.
-import java.io.FileReader;
-import java.io.IOException;
-public class TestApp {
-public static void main(String[] args)throws IOException {
-FileReader fr=new FileReader("abc.txt");
-int i=fr.read();
-while(i!=-1){
-System.out.println((char)i);
-i=fr.read();
-}
 
-}
