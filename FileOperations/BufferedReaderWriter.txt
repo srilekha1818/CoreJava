@@ -1,0 +1,16 @@
+BufferedWriter:
+
+By using BufferedWriter we can write the character data to the file.
+It can't communicate with the file directly, it can communicate only with
+writer Object.
+Constructor
+BufferedWriter bw=new BufferedWriter(Writer w);
+BufferedWriter bw=new BufferedWriter(Writer w,int buffersize);
+Which of the following declarations are valid?
+1. BufferedWriter bw=new BufferedWriter("cricket.txt"); //invalid
+2. BufferedWriter bw=new BufferedWriter (new File("cricket.txt"));//invalid
+3. BufferedWriter bw=new BufferedWriter (new FileWriter("cricket.txt")); //valid
+4. BufferedWriter bw=new BufferedWriter(new BufferedWriter(new
+FileWriter("crickter.txt")));//valid
+
+// it indicates 2 levels of buffering.

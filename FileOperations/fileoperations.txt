@@ -224,3 +224,45 @@ the no of characters copied from the file into char[] array.
 6. Char[] ch=new Char[(int)f.length()];
 7. void close();
 
+eg#2. Reading an array of characters
+abc.txt
+=======
+1000 characters are available
+Scenario1:
+FileReader fr=new FileReader("abc.txt");
+char[] ch=new char[10];
+int noOfCharactersCopied=fr.read(ch);
+Scenario2:
+FileReader fr=new FileReader("abc.txt");
+char[] ch=new char[10000];
+int noOfCharactersCopied=fr.read(ch);
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.File;
+public class TestApp {
+public static void main(String[] args)throws IOException {
+
+File f=new File("abc.txt");
+FileReader fr=new FileReader(f);
+char ch[] = new char[(int)f.length()];
+fr.read(ch);
+String data=new String(ch);
+System.out.println(data);
+fr.close();
+
+}
+}
+Usage of FileWriter and FileReader is not recommended because of following reason
+1. While writing data by FileWriter compulsory we should insert line separator(\n)
+manually which is a bigger headache to the
+programmer.
+2. While reading data by FileReader we have to read character by character instead
+of line by line which is not convenient to the
+programmer.
+Assume we need to search for a 10 digit mobile no present in a file called
+"mobile.txt"
+=>Since we can read only character just to search one mobile no 10 searching and
+to search 10,000 mobile no we need to read 1cr times,
+so performance is very low.
+3. To overcome these limitations we should go for BufferedWriter and BufferedReader
+concepts.
