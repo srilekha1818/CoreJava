@@ -6,12 +6,12 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-class Dog implements Serializable
+class Dog1 implements Serializable
 {
 static{
 System.out.println("static block gets executed...");
 }
-Dog(){
+Dog1(){
 System.out.println("Object is created...");
 }
 int i = 10;
@@ -23,7 +23,7 @@ public class DogSerialize
 public static void main(String[] args)throws Exception
 {
 
-Dog d = new Dog();
+Dog1 d = new Dog1();
 System.out.println("Serialization started.....");
 String fileName = "abc.ser";
 FileOutputStream fos = new FileOutputStream(fileName);
@@ -37,7 +37,7 @@ System.out.println("De-Serialization started.....");
 FileInputStream fis = new FileInputStream("abc.ser");
 ObjectInputStream ois = new ObjectInputStream(fis);
 Object obj=ois.readObject();
-Dog d1 = (Dog)obj;
+Dog1 d1 = (Dog1)obj;
 System.out.println("De-Serialized Object refernce is ::"+d1);
 System.out.println("De-Serialization ended.....");
 
